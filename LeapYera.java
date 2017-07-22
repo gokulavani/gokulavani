@@ -9,9 +9,8 @@ public class LeapYera {
 			for(int i=0;i<20;i++)
 			{
 				year+=4;
-				count++;
 				System.out.println(year);
-				System.out.println(count);
+				
 
 			}
 		  s.close();                                  
