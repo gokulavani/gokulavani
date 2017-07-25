@@ -1,31 +1,26 @@
 import java.util.*;
-public class prime3 {
+public class prime3{
 
 	public static void main(String[] args) {
 Scanner s=new Scanner(System.in);
 int  n=s.nextInt();
-int b=0;
-int c=0;
-int num=1;
-while(num <=n)
-{
-    b=1;
-    c=0;
-    while(b<= num)
-         {
-           if((num%b)==0)
-             c=c+1;
-             b++;
-         }
-            if(c==2)
-            {
-            if(num%10==3)	
-System.out.println(num );
-            }
-             num ++;
-            
-            
- }
+
+	int flag = 0;
+	int sum = 0;
+	for(int i=2;i<=n;i++) {
+		for(int j=2;j<i;j++) {
+			if(i%j==0) {
+				flag=1;
+			}
+		}
+		if(flag==0) {
+			if(i==3||i%10==3) {
+			  sum+=i;
+			}
+		}
+		flag=0;
+}
+System.out.println(sum );
 s.close();
 	
 
