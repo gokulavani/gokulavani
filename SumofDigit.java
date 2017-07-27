@@ -1,0 +1,16 @@
+import java.util.*;
+public class SumofDigit {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();                                   
+		int sum=0;
+		for(int i=n;i!=0;i/=10) {
+			for(int j=i;j!=0;j/=10) {
+sum+=j%10;
+	}
+
+		}
+		System.out.println(sum);
+		s.close();
+	}
+}
